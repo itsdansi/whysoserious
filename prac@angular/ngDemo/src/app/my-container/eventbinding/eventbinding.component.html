@@ -1,0 +1,11 @@
+<div class="eventDemo">
+    <button (click)="showName()">Give me your name</button>
+    <button (click)="showAddress()">Address</button>
+    <button (click)="showPhone()">Phone</button>
+    <span class="myForm">
+        <input #inputInfo type="text" [value]="clearVal">
+        <button (click)="myInputInfo(inputInfo)">Try me</button>
+    </span>
+    <p>{{msg}}</p>
+
+</div>

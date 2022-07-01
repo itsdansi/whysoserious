@@ -1,0 +1,17 @@
+
+button,input[type="text"],select{
+    margin:3px;
+    padding:5px;
+    border-radius: 5%;
+}
+button:hover{
+    background-color: rgb(174, 174, 240);
+    border-radius: 5%;
+}
+.eventDemo{
+    width: 800px;
+    margin:auto;
+}
+.myForm{
+    float: right;
+}
