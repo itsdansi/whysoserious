@@ -1,0 +1,32 @@
+<div class="row">
+    <h4 *ngIf = "addToCartMsg">{{addToCartMsg}} added to the cart!</h4>
+    <div class="column">
+        <div class="card">
+            <h3>Card 1</h3>
+            <p>This is card one hai</p>
+            <button (click) = "onSelect('Card One')">Select</button>
+        </div>
+    </div>
+    <div class="column">
+        <div class="card">
+            <h3>Card 2</h3>
+            <p>This is card two hai</p>
+             <button (click) = "onSelect('Card Two')">Select</button>
+        </div>
+    </div>
+    <div class="column">
+        <div class="card">
+            <h3>Card 3</h3>
+            <p>This is card three hai</p>
+             <button (click) = "onSelect('Card Three')">Select</button>
+        </div>
+    </div>
+    <div class="column">
+        <div class="card">
+            <h3>Card 4</h3>
+            <p>This is card four hai</p>
+             <button (click) = "onSelect('Card Four')">Select</button>
+        </div>
+    </div>
+</div>
+<app-child [productSelected] = "proSelected" [selectedProduct]="selProduct" (addToCartMsg)="onAddToCart($event)"></app-child>

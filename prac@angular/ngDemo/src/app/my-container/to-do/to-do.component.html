@@ -1,0 +1,16 @@
+<input type="text" placeholder="Enter todo task" #todo> 
+<button (click) = "onAdd(todo)">Add</button>
+<br><br>
+<table>
+    <tr>
+        <th>S.N</th>
+        <th>Title</th>
+        <th>Action</th>
+    </tr>
+
+    <tr *ngFor = "let data of toDoList; index as i">
+        <td>{{i+1}}</td>
+        <td>{{data}}</td>
+        <td><button (click) = "onRemove(i)">Remove</button></td>
+    </tr>
+</table>

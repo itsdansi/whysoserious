@@ -1,0 +1,30 @@
+<div class="row">
+    <div class="column">
+        <form class="card" [formGroup]="myReactiveForm" (ngSubmit) ="onSubmit()">
+            <h3> Reactive Form</h3>
+            <label for="username">User Name*</label><br>
+            <input type="text" formControlName="username" id="username" required ><br>
+            <!-- <small *ngIf="!myReactiveForm.get('username').valid && myReactiveForm.get('username').touched">Username is required!</small><br><br> -->
+            <label for="email">Email*</label><br>
+            <input type="email" formControlName = "email" id="email" required email ><br>!myReactiveForm.get('email').valid && myReactiveForm.get('email').touched
+            <!-- <small *ngIf="!myReactiveForm.get('email').valid && myReactiveForm.get('email').touched">Invalid Email address></small><br><br> -->
+            <label for="course">Course*</label><br>
+            <select formControlName = "course" id="course" required #course>
+                <option value="Angular">Angular</option>
+                <option value="React">React</option>
+                <option value="Vue">Vue</option>
+            </select><br>
+            <!-- <small *ngIf="!course.valid && course.dirty">Please choose one course!</small><br><br> -->
+            <br>
+            <button type="submit" [disabled]="">Click me</button>
+        </form>
+    </div>
+    <div class="column" *ngIf="selected">
+        <div class="card">
+            <h3>Form Input:</h3>
+            <p>Username: <strong>{{formData.username}}</strong></p>
+            <p>Email Address: <strong></strong></p>
+            <p>Course: <strong></strong></p>
+        </div>
+    </div>
+</div>

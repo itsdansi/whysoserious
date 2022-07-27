@@ -1,0 +1,17 @@
+<form (ngSubmit)="onSubmit()">
+    <label for="username">User Name*</label><br>
+    <input type="text" name="username" id="" ngModel required #username="ngModel"><br>
+    <small *ngIf="!username.valid && username.touched">Username is required!</small><br><br>
+    <label for="email">Email*</label><br>
+    <input type="email" name="email" id="" ngModel required email #email="ngModel"><br>
+    <small *ngIf="!email.valid && email.touched">Invalid email Id!</small><br><br>
+    <label for="course">Course*</label><br>
+    <select name="course" id="course" ngModel required #course>
+        <option value="Angular">Angular</option>
+        <option value="React">React</option>
+        <option value="Vue">Vue</option>
+    </select><br>
+    <!-- <small *ngIf="!course.valid && course.dirty">Please choose one course!</small><br><br> -->
+    <br>
+    <button type="submit">Click me</button>
+</form>

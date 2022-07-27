@@ -1,0 +1,5 @@
+<div class="child">
+    <h2 *ngIf="!productSelected">Please select a card</h2>
+    <h2 *ngIf="productSelected">{{selectedProduct}}</h2>
+    <button (click)="onAddToCart()">Add to card</button>
+</div>

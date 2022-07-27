@@ -21,6 +21,10 @@
 .toplinks a:hover{
     color : #000;
 }
+
+.toplinks a:active {
+    color: #000;
+}
 .clear{
     clear:both;
 }
